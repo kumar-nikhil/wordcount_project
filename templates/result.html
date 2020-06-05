@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<h1> There are {{count}} words in the entered text </h1>
+
+<a href="{% url 'home' %}">Start Again!</a>
+
+<h2>Full Text : </h2>
+{{fulltext}}
+<h2>Word Count</h2>
+{% for word, count_total in sortedWords %}
+    {{word}} -  {{count_total}}
+    <br>
+
+
+{% endfor %}
+
+
+</body>
+</html>
